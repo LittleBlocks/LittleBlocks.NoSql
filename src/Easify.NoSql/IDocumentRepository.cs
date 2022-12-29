@@ -1,5 +1,5 @@
-// This software is part of the Easify.Ef Library
-// Copyright (C) 2018 Intermediate Capital Group
+// This software is part of the LittleBlocks.Ef Library
+// Copyright (C) 2018 LittleBlocks
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -21,10 +21,10 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
-using Easify.Extensions.Specifications;
-using Easify.NoSql.ComponentModel;
+using LittleBlocks.Extensions.Specifications;
+using LittleBlocks.NoSql.ComponentModel;
 
-namespace Easify.NoSql
+namespace LittleBlocks.NoSql
 {
     public interface IDocumentRepository<T>
     {

@@ -16,16 +16,12 @@
 // 
 
 
-using System;
-using System.Linq.Expressions;
-
-namespace LittleBlocks.NoSql.ComponentModel
+namespace LittleBlocks.NoSql.MongoDb
 {
-    public interface ISortItBy<T>
+    public sealed class MongoDbConfiguratorOptions
     {
-        IThenSortItBy<T> OrderBy(string field);
-        IThenSortItBy<T> OrderByDescending(string field);
-        IThenSortItBy<T> OrderBy(Expression<Func<T, object>> property);
-        IThenSortItBy<T> OrderByDescending(Expression<Func<T, object>> property);
+        public bool IgnoreExtraElements { get; set; } = true;
+        public bool RepresentEnumAsString { get; set; } = true;
+        public bool EnableTelemetry { get; set; } = false;
     }
 }

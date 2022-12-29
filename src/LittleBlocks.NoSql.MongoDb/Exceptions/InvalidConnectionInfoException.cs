@@ -17,15 +17,11 @@
 
 
 using System;
-using System.Linq.Expressions;
 
-namespace LittleBlocks.NoSql.ComponentModel
+namespace LittleBlocks.NoSql.MongoDb.Exceptions
 {
-    public interface ISortItBy<T>
+    public class InvalidConnectionInfoException : Exception
     {
-        IThenSortItBy<T> OrderBy(string field);
-        IThenSortItBy<T> OrderByDescending(string field);
-        IThenSortItBy<T> OrderBy(Expression<Func<T, object>> property);
-        IThenSortItBy<T> OrderByDescending(Expression<Func<T, object>> property);
+
     }
 }

@@ -16,16 +16,23 @@
 // 
 
 
-using System;
-using System.Linq.Expressions;
+using System.Security.Authentication;
 
-namespace LittleBlocks.NoSql.ComponentModel
+namespace LittleBlocks.NoSql.MongoDb
 {
-    public interface ISortItBy<T>
+    public class MongoDbOptions
     {
-        IThenSortItBy<T> OrderBy(string field);
-        IThenSortItBy<T> OrderByDescending(string field);
-        IThenSortItBy<T> OrderBy(Expression<Func<T, object>> property);
-        IThenSortItBy<T> OrderByDescending(Expression<Func<T, object>> property);
+        public MongoDbOptions()
+        {
+            IsSslEnabled = true;
+            SslProtocol = SslProtocols.Tls12;
+            IgnoreExtraPropertiesFromCollection = true;
+        }
+
+        public string ConnectionUrl { get; set; }
+        public bool IsSslEnabled { get; set; }
+        public string PrimaryDatabaseName { get; set; }
+        public SslProtocols SslProtocol { get; set; }
+        public bool IgnoreExtraPropertiesFromCollection { get; set; }
     }
 }

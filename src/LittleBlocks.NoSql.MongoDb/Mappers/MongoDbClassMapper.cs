@@ -16,16 +16,27 @@
 // 
 
 
-using System;
-using System.Linq.Expressions;
+using MongoDB.Bson.Serialization;
 
-namespace LittleBlocks.NoSql.ComponentModel
+namespace LittleBlocks.NoSql.MongoDb.Mappers
 {
-    public interface ISortItBy<T>
+    public static class MongoDbClassMapper
     {
-        IThenSortItBy<T> OrderBy(string field);
-        IThenSortItBy<T> OrderByDescending(string field);
-        IThenSortItBy<T> OrderBy(Expression<Func<T, object>> property);
-        IThenSortItBy<T> OrderByDescending(Expression<Func<T, object>> property);
+        private static readonly object SyncObject = new object();
+
+        public static void RegisterClass<T>(bool ignoreExtraProperties = true)
+        {
+            lock (SyncObject)
+            {
+                if (!BsonClassMap.IsClassMapRegistered(typeof(T)))
+                {
+                    BsonClassMap.RegisterClassMap<T>(m =>
+                    {
+                        m.AutoMap();
+                        m.SetIgnoreExtraElements(ignoreExtraProperties);
+                    });
+                }
+            }
+        }
     }
 }

@@ -16,16 +16,11 @@
 // 
 
 
-using System;
-using System.Linq.Expressions;
-
-namespace LittleBlocks.NoSql.ComponentModel
+namespace LittleBlocks.NoSql.MongoDb
 {
-    public interface ISortItBy<T>
+    public interface IMongoDbRepositoryFactory
     {
-        IThenSortItBy<T> OrderBy(string field);
-        IThenSortItBy<T> OrderByDescending(string field);
-        IThenSortItBy<T> OrderBy(Expression<Func<T, object>> property);
-        IThenSortItBy<T> OrderByDescending(Expression<Func<T, object>> property);
+        IMongoDbRepository<T> GetMongoDbRepository<T>(string database);
+        IMongoDbRepository<T> GetMongoDbRepository<T>(string database, string collectionName);
     }
 }

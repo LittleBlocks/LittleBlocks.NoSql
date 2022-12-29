@@ -16,16 +16,17 @@
 // 
 
 
-using System;
-using System.Linq.Expressions;
-
-namespace LittleBlocks.NoSql.ComponentModel
+namespace LittleBlocks.NoSql.MongoDb.ApplicationInsights
 {
-    public interface ISortItBy<T>
+    public class TelemetryContext
     {
-        IThenSortItBy<T> OrderBy(string field);
-        IThenSortItBy<T> OrderByDescending(string field);
-        IThenSortItBy<T> OrderBy(Expression<Func<T, object>> property);
-        IThenSortItBy<T> OrderByDescending(Expression<Func<T, object>> property);
+        public TelemetryContext(string subject, string correlationId)
+        {
+            Subject = subject;
+            CorrelationId = correlationId;
+        }
+
+        public string Subject { get; }
+        public string CorrelationId { get; }
     }
 }

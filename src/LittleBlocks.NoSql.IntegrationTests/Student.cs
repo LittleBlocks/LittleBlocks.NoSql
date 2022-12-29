@@ -17,15 +17,28 @@
 
 
 using System;
-using System.Linq.Expressions;
 
-namespace LittleBlocks.NoSql.ComponentModel
+namespace LittleBlocks.NoSql.IntegrationTests
 {
-    public interface ISortItBy<T>
+    public class Student
     {
-        IThenSortItBy<T> OrderBy(string field);
-        IThenSortItBy<T> OrderByDescending(string field);
-        IThenSortItBy<T> OrderBy(Expression<Func<T, object>> property);
-        IThenSortItBy<T> OrderByDescending(Expression<Func<T, object>> property);
+        public Student()
+        {
+            Id = Guid.NewGuid().ToString();
+            Name = "Student" + Guid.NewGuid();
+            GroupId = 1;
+        }
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public DateTime DateOfBirth { get; set; } = DateTime.Today.Add(TimeSpan.FromDays(new Random().Next(1000) * -1));
+        public int Age { get; set; } = (new Random().Next(100));
+        public int GroupId { get; set; }
+        public StudentStage StudentStage { get; set; }
+    }
+
+    public enum StudentStage
+    {
+        Primary,
+        HighSchool
     }
 }
