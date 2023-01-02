@@ -4,13 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Justin French</Authors>
-    <Company>ICG</Company>
+    <Company>LittleBlocks</Company>
     <PackageProjectUrl>https://github.com/LittleBlocks/LittleBlocks.NoSql.git</PackageProjectUrl>
     <RepositoryUrl>https://github.com/LittleBlocks/LittleBlocks.NoSql.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LittleBlocks.Http" Version="1.1.4" />
+    <PackageReference Include="LittleBlocks.Http" Version="1.0.2" />
   </ItemGroup>
 
 

@@ -12,6 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittleBlocks.NoSql.MongoDb.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittleBlocks.NoSql.IntegrationTests", "LittleBlocks.NoSql.IntegrationTests\LittleBlocks.NoSql.IntegrationTests.csproj", "{87E32D29-EFF8-47D7-9ED7-0FC199E10461}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extras", "Extras", "{C42DC95D-6325-4267-B6B5-F05CFAE26366}"
+	ProjectSection(SolutionItems) = preProject
+		..\GitVersion.yml = ..\GitVersion.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
