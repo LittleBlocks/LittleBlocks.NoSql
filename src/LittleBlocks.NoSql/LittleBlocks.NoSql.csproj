@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Mohammad Moattar</Authors>
+    <Company>LittleBlocks</Company>
+    <Description />
+    <RepositoryUrl>https://github.com/LittleBlocks/LittleBlocks.NoSql.git</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LittleBlocks" Version="1.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.3" />
+  </ItemGroup>
+
+</Project>

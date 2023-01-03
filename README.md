@@ -1,4 +1,4 @@
-# Easify NoSql
+# LittleBlocks NoSql
 
 The library contains provides high level repository and extensions for Mongo databases. 
 
@@ -173,8 +173,8 @@ Security issues and bugs should be reported by creating the relevant features an
 
 ## Related projects
 
-- Easify: https://github.com/icgam/Easify
-- Easify.Ef: https://github.com/icgam/Easify.Ef
+- LittleBlocks: https://github.com/LittleBlocks/LittleBlocks
+- LittleBlocks.Ef: https://github.com/LittleBlocks/LittleBlocks.Ef
 - MongoDb: https://github.com/mongodb/mongo-csharp-driver
 - Mongo2Go: https://github.com/Mongo2Go/Mongo2Go
   
