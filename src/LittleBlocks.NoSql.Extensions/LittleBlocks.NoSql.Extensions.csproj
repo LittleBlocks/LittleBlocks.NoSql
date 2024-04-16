@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Justin French</Authors>
     <Company>LittleBlocks</Company>
@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LittleBlocks.Http" Version="1.0.2" />
+    <PackageReference Include="LittleBlocks.Http" Version="2.0.0" />
   </ItemGroup>
 
 
